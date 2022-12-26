@@ -1,0 +1,35 @@
+Difference between predict and predict_proba
+
+predict:
+All supervised estimators in scikit-learn implement the predict() method that can be executed on a trained model in order to predict the actual label (or class) over a new set of data.
+
+The method accepts a single argument that corresponds to the data over which the predictions will be made and it returns an array containing the predicted label for each data point.
+
+
+predict_proba:
+In the context of classification tasks, some sklearn estimators also implement the predict_proba method that returns the class probabilities for each data point.
+
+The method accepts a single argument that corresponds to the data over which the probabilities will be computed and returns an array of lists containing the class probabilities for the input data points.
+
+Feature Extraction OF Text Data : Tf-idf Vectorizer
+
+Feature Extraction is the mapping from textual data to real valued vectors is called Feature Extraction
+ 
+ Machine learning algorithm and models are fitted with numerical data for easier, faster and reliable results. Models are unable to understand textual data. So we need to extract features from the data in order to apply machine learning algorithm.
+
+ Bag Of Words : List of unique words in the text corpus
+
+ Term Frequency-Inverse Dovument Frequency(TF-IDF): It is used to count the number of times each word appears in a document.
+ For this case the Vectorizer doesnot understand the context of the text; it counts the Frequency of each word in the paragraph and draws insight. To understand the context of the text, we use NLP techniques
+
+ Term Frequency: 
+ Number of times term t appears in a document / number of terms in the document
+
+ Inverse Document Frequency = log(N/n), where N is the number of documents and n is the number of document a term t has appeared in.
+
+ The IDF value of a rare word is hogh, where as IDF value of a frequent word is low
+
+ TF-IDF value of a term = TF * IDF = > these are the vectors
+
+ implementing in python : 
+ from sklearn.feature_extraction.text import TfIdfVectorizer
